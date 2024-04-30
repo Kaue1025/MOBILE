@@ -170,7 +170,7 @@ export default function App() {
             value={receberOfertas}
           />
         </View>
-        <View>
+        <View style={{ marginTop: 20 }}>
           <Button onPress={onShare} title="Compartilhar"/>
         </View>
       </ScrollView>

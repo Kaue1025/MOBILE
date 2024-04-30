@@ -99,17 +99,14 @@ export default function App() {
             onValueChange={handleSwitchChange}
             value={receberOfertas}
           />
-          {/*Verefica a lista se o primeiro preço é válido se for válido aparece o botão se não for roda o null*/}
         </View> 
-        {filteredData.length > 0 && filteredData[0].price ? ( 
-  <View style={{ marginTop: 20 }}>
+        <View style={{ marginTop: 20 }}>
+  {filteredData.length > 0 && filteredData.some(item => item.price) && (
     <Button onPress={onShare} title="Compartilhar" />
-  </View>
-) : null}
-
-
-      </ScrollView>
-    </View>
+  )}
+</View>
+</ScrollView>
+</View>
   );
 }
 
